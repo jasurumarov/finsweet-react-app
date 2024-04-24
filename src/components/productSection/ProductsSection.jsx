@@ -70,10 +70,10 @@ const ProductsSection = () => {
                   <div className="products__cards">
                     {product} 
                   </div>
-                  {loading ? <div className='loading'>
-                    {loadingItem}
-                  </div> : <></>}
                 </OwlCarousel>
+                {loading ? <div className='loading'>
+                  {loadingItem}
+                </div> : <></>}
             </div>
         </div>
     </div>
