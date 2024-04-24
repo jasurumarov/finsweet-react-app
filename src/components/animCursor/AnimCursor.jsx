@@ -15,6 +15,7 @@ const AnimCursor = () => {
         }}
         clickables={[
             'li',
+            '.products__card-img',
             'a',
             'input[type="search"]',
             'input[type="text"]',
