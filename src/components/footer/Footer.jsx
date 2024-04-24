@@ -1,6 +1,8 @@
 import React from 'react'
 import {NavLink} from "react-router-dom"
 import { FaFacebookF, FaYoutube, FaInstagram, FaTwitter } from "react-icons/fa";
+// IMAGES
+import SiteLogo from "../../images/footer-logo.svg"
 
 const Footer = () => {
   return (
@@ -8,7 +10,7 @@ const Footer = () => {
         <div className="container">
             <div className="footer__content">
               <div className="footer__title">
-                <img src="./src/images/footer-logo.svg" alt="site logo" />
+                <img src={SiteLogo} alt="site logo" />
                 <h2>Bespoke software solutions</h2>
                 <ul>
                   <a href="https://www.facebook.com/" target='_blank'>
