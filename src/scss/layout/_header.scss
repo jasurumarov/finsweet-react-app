@@ -1,0 +1,86 @@
+@use '../abstracts' as *;
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: white;
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .header__logo {
+            padding: 26px 0;
+        }
+        .header__right {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            .header__right__list {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                .header__right__list-item {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    color: #394149;
+                    border-bottom: 2px solid #fff;
+                }
+                .header__right__list-item.active {
+                    border-bottom: 2px solid #394149;
+                }
+            }
+            .header__right-cloneBtn {
+                padding: 17px 32px;
+                background: #F58A071A;
+                color: #F58A07;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 17.04px;
+                border-radius: 31px;
+            }
+        }
+        .header__right-menuBtn {
+            display: none;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+@media (max-width: 874px) {
+    header {
+        nav {
+            .header__right-menuBtn {
+                display: block;
+            }
+            .header__right {
+                z-index: 10;
+                position: absolute;
+                top: 70px;
+                left: 0;    
+                width: 100%;
+                padding: 20px 0;
+                background: white;
+                box-shadow: 0 3px 5px #0002;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                transition: .3s ease;
+                transform-origin: top;
+                transform: scaleY(0);
+                .header__right__list {
+                    flex-direction: column;
+                    gap: 14px;
+                }
+            }
+            .header__right.show {
+                transform: scaleY(1);
+            }
+        }
+    }
+}
