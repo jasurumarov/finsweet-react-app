@@ -7,6 +7,15 @@
 
 .singleRoute-page {
     padding: 64px 0;
+    .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100px;
+            margin: 140px 0;
+        }
+    }
     .singleRoute__content {
         display: flex;
         flex-wrap: wrap;

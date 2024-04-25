@@ -3,20 +3,22 @@ import { useParams } from 'react-router-dom'
 import axios from '../../api'
 // IMAGES 
 import Rating from '../../images/rating.png'
+import loadingGif from '../../images/loading.gif'
 
 const SingleRoute = () => {
   const {id} = useParams()
   const [product, setProduct] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    setLoading(true)
     axios.get(`products/${id}`)
     .then(res => setProduct(res.data))
     .catch(res => console.log(res))
+    .finally(() => setLoading(false))
   }, [])
 
-  return (
-    <div className='singleRoute-page'>
-      <div className="container">
+  let card = (
         <div className="singleRoute__content">
           <img className='singleRoute__mainImg' src={product?.thumbnail} alt="product image" />
           <div className='singleRoute__title'>
@@ -39,6 +41,14 @@ const SingleRoute = () => {
             </div>
           </div>
         </div>
+  )
+
+  return (
+    <div className='singleRoute-page'>
+      <div className="container">
+        {loading ? <div className='loading'>
+          <img src={loadingGif} alt="" />
+        </div> : <>{card}</>}
       </div>
     </div>
   )
