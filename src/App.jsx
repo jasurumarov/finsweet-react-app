@@ -11,10 +11,12 @@ import NotFound from "./components/notFound/NotFound"
 import AnimCursor from "./components/animCursor/AnimCursor"
 import Products from "./pages/products/Products"
 import SingleRoute from "./pages/singleRoute/SingleRoute"
+import ScrollToTop from "./components/scrollToTop/ScrollToTop"
 
 function App() {
   return (
     <>
+      <ScrollToTop/>
       <AnimCursor/>
       <Header/>
       <Routes>
