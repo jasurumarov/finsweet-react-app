@@ -17,9 +17,11 @@ const ProductsSection = () => {
     axios
       .get("/products")
       .then(res => setData(res.data.products))
-      .catch(res => console.log(res))
+      .catch(res => console.log(res.data.products))
       .finally(() => setLoading(false))
   }, [])
+
+  console.log(data);
 
   let product = data
     ?.slice(0, 7)

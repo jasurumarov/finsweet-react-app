@@ -18,7 +18,7 @@ const SingleRoute = () => {
     <div className='singleRoute-page'>
       <div className="container">
         <div className="singleRoute__content">
-          <img src={product?.thumbnail} alt="product image" />
+          <img className='singleRoute__mainImg' src={product?.thumbnail} alt="product image" />
           <div className='singleRoute__title'>
             <div className='singleRoute__title--images'>
               <img src={product?.images[0]} alt="" />
