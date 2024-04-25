@@ -26,7 +26,9 @@ const ProductsSection = () => {
     .filter((el, i) => i !== 3)
     .map(el => (
       <div key={el.id} className="item products__card">
-        <img className="products__card-img" src={el.images[0]} alt="products card img" />
+        <Link to={`/product/${el.id}`}>
+          <img className="products__card-img" src={el.images[0]} alt="products card img" />
+        </Link>
         <div className="products__card-title">
             <h3 title={el.title}>{el.title}</h3>
             <p title={el.description}>{el.description}</p>

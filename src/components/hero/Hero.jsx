@@ -2,7 +2,6 @@ import React from 'react'
 import circle from "../../images/Circle.svg"
 
 const Hero = (props) => {
-    console.log(props);
   return (
     <div className='hero-section'>
         <div className="container">

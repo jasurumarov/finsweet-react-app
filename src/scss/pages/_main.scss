@@ -1,6 +1,63 @@
 @use "../abstracts" as *;
 
-.home-page, .about-page, .blog-page, .services-page, .careers-page, .products-page, .sigleProduct-page {
+.home-page, .about-page, .blog-page, .services-page, .careers-page, .products-page, .singleRoute-page {
     margin-top: 83px;
     background: #DCEAF5;
+}
+
+.singleRoute-page {
+    padding: 64px;
+    .singleRoute__content {
+        display: flex;
+        gap: 60px;
+        .singleRoute__title--images {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 20px;
+            img {
+                border: 1px solid black;
+                background: white;
+                border-radius: 20px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+        h2 {
+            margin-bottom: 4px;
+        }
+        p {
+            margin-bottom: 16px;
+        }
+        .singleRoute__title--rating {
+            display: flex;
+            gap: 20px;
+            img {
+                width: 100px;
+                height: 21.25px;
+            }
+            p {
+                color: #626364;
+            }
+        }
+    }
+    h5 {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 4px;
+        display: flex;
+        gap: 8px;
+        span {
+            font-weight: 500;
+        }
+    }
+    .singleRoute__title--prices {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        h4 {
+            font-weight: 600;
+            font-size: 22px;
+        }
+    }
 }

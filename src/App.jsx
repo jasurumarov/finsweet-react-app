@@ -10,6 +10,7 @@ import Footer from "./components/footer/Footer"
 import NotFound from "./components/notFound/NotFound" 
 import AnimCursor from "./components/animCursor/AnimCursor"
 import Products from "./pages/products/Products"
+import SingleRoute from "./pages/singleRoute/SingleRoute"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/careers" element={ <Careers/> }/>
         <Route path="/blog" element={ <Blog/> }/>
         <Route path="/products" element={ <Products/> }/>
+        <Route path="/product/:id" element={ <SingleRoute/> }/> {/* Dynamic Route */}
         <Route path="*" element={ <NotFound/> }/>
       </Routes>
       <Footer/>
