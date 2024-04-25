@@ -28,7 +28,7 @@
         }
         .results-section__cards {
             display: flex;
-            // flex-wrap: wrap;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 66px;
             .results-section__card {
